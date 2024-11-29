@@ -1,0 +1,127 @@
+/* Apply consistent button styles to all buttons */
+button, .colorPickerButton {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;  /* Ensure consistent font */
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Color picker button specific styles */
+.colorPickerButton {
+    background-color: #4CAF50; /* Light mode background color */
+    color: white;
+    gap: 10px;
+}
+
+.colorPickerButton:hover {
+    background-color: #45a049;
+}
+
+.colorPickerButton:active {
+    background-color: #388e3c;
+}
+
+/* Dark mode styles for the color picker button */
+body.dark-mode .colorPickerButton {
+    background-color: #444; /* Dark mode background */
+    color: white;
+}
+
+body.dark-mode .colorPickerButton:hover {
+    background-color: #555;
+}
+
+body.dark-mode .colorPickerButton:active {
+    background-color: #333;
+}
+
+/* Default styles for light mode */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #ffffff; /* Light mode background */
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body always takes up the full height */
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff; /* Light mode canvas background */
+    transition: background-color 0.3s;
+}
+
+.toolbar {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1;  /* Toolbar stays above the canvas */
+}
+
+/* Other button styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #388e3c;
+}
+
+/* Copyright text styles */
+.copyright {
+    font-family: 'Arial', sans-serif;
+    font-size: 15px;
+    color: #333;
+    margin-left: 10px;
+    align-self: center;  /* Vertically align the text */
+}
+
+/* Dark mode footer */
+body.dark-mode footer {
+    background-color: #333;
+    color: white;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1e1e1e;  /* Dark mode background */
+}
+
+body.dark-mode canvas {
+    background-color: #2d2d2d;  /* Dark mode canvas background */
+}
+
+body.dark-mode .toolbar button,
+body.dark-mode .toolbar input {
+    background-color: #444;
+    color: white;
+}
+
+body.dark-mode .toolbar button:hover {
+    background-color: #555;
+}
+
+body.dark-mode #darkModeToggle {
+    background-color: #888;
+}
+
+body.dark-mode .toolbar button:active {
+    background-color: #666;
+}
