@@ -122,6 +122,7 @@ function undo() {
 
         const prevState = undoStack[undoStack.length - 1];  // Get the previous state
         ctx.putImageData(prevState, 0, 0);
+        saveState();
     }
 }
 
@@ -137,6 +138,7 @@ function redo() {
         }
 
         ctx.putImageData(lastState, 0, 0);
+        saveState();
     }
 }
 
